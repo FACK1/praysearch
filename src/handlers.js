@@ -34,6 +34,7 @@ const  clientHandler=(request,response)=>{
 //------------------------------------------------
 const SPTHandler=(request,response)=>{
   //spt();
+  //this is from function
 }
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
