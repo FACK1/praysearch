@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const spt = require('/praysearch.js');
+//const spt = require('/praysearch.js');
 //------------------------------------------------
 const  homeHandler=(request,response)=>{
   const htmlPath =  path.join(__dirname, '../client/index.html')
@@ -33,11 +33,11 @@ const  clientHandler=(request,response)=>{
 }
 //------------------------------------------------
 const SPTHandler=(request,response)=>{
-  spt();
+  //spt();
 }
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
-  response.writeHead(404, {'content-Type': contentTypeMapping[extension]})
+  response.writeHead(404, {'Content-Type':'text/html'})
   response.end('<h1>Page Not Found</h1>')
 }
 
