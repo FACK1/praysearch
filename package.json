@@ -8,10 +8,14 @@
     "nodemon": "^1.18.7",
     "tape": "^4.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
   "scripts": {
     "test": "tape src/test.js | tap-spec",
-    "start":"nodemon src/server.js"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
