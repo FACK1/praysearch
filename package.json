@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "eslint": "^5.9.0",
     "node": "^11.2.0",
     "nodemon": "^1.18.7",
     "tape": "^4.9.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.7",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.9.1"
+    "jshint": "^2.9.6"
   },
   "scripts": {
-    "test": "tape src/test.js | tap-spec",
+    "test": "jshint src/test.js && tape src/test.js | tap-spec",
     "start": "nodemon src/server.js"
   },
   "repository": {
