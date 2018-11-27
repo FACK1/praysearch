@@ -6,12 +6,13 @@
   "dependencies": {
     "node": "^11.2.0",
     "nodemon": "^1.18.7",
+    "supertest": "^3.3.0",
     "tape": "^4.9.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "tape src/test.js | tap-spec",
-    "start":"nodemon src/server.js"
+    "test": "tape src/test.js ",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",

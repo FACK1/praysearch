@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-//const spt = require('/praysearch.js');
+const timeOfPray = require('./praysearch.js');
 //------------------------------------------------
 const  homeHandler=(request,response)=>{
   const htmlPath =  path.join(__dirname, '../client/index.html')
@@ -33,8 +33,7 @@ const  clientHandler=(request,response)=>{
 }
 //------------------------------------------------
 const SPTHandler=(request,response)=>{
-  //spt();
-  //this is from function
+  timeOfPray(request,response);
 }
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
