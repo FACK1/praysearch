@@ -6,11 +6,11 @@
   "dependencies": {
     "eslint": "^5.9.0",
     "node": "^11.2.0",
-    "nodemon": "^1.18.7",
-    "tape": "^4.9.1"
+    "nodemon": "^1.18.7"
   },
   "devDependencies": {
-    "jshint": "^2.9.6"
+    "jshint": "^2.9.6",
+    "tape": "^4.9.1"
   },
   "scripts": {
     "test": "tape src/test.js | tap-spec",
