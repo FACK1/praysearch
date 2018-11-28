@@ -1,10 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-<<<<<<< HEAD
 // const spt = require('/praysearch.js');
-=======
-//const spt = require('/praysearch.js');
->>>>>>> 57db8151d28710b94483aa2ef4b100bf038fbaa9
+
 //------------------------------------------------
 const  homeHandler=(request,response)=>{
   const htmlPath =  path.join(__dirname, '../client/index.html')
