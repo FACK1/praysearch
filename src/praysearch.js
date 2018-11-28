@@ -10,6 +10,7 @@ var country=(queryString.parse(info)).country;
   request1(`http://api.aladhan.com/v1/calendarByCity?city=${city}&country=${country}`
   , function (error, response1, body) {
      const { data } = JSON.parse(body)
+     console.log("data is",data)
      var timeofparys=[]
      var dates=[]
      var hijridates=[]
