@@ -1,8 +1,22 @@
-const test = require('tape');
+var test = require('tape')
+var tps = require('./praysearch.js')
+const supertest = require('supertest');
+const router = require('./router');
 
-test('test is working', (t)=>{
-  const actual = 2;
-  const expected= 2;
-  t.equal(actual,expected, 'should return' +actual +'=' + expected);
-  t.end()
+test('testing for test', function(t){
+    t.deepEqual(2,2, "testing for test")
+    t.end();
 })
+
+test('check status code is 200', (t) => {
+  supertest(router)
+    .get("/")
+    .expect(200)
+    .expect('Content-Type', /html/)
+    .end((err, res) => {
+      t.error(err)
+      t.equal(res.statusCode, 200, 'response should 200');
+      //t.equal(res.text, 'Hello', 'response should contain \'Hello\'');
+      t.end();
+    });
+});
