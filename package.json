@@ -10,11 +10,13 @@
   },
   "devDependencies": {
     "jshint": "^2.9.6",
+    "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
   "scripts": {
     "test": "tape src/test.js | tap-spec",
-    "start": "nodemon src/server.js"
+    "dev":"nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
