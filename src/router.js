@@ -15,8 +15,8 @@ const router = (request, response)=> {
             handlers.clientHandler(request,response)
     }
     //-----Search Endpoint-----------------------------------------------------
-    else if (request.url.includes('/searchPraytimes/')) {
-            handlers.SPTHandler(request,response)
+    else if (request.url.includes('/searchPraytimes')) {
+          handlers.SPTHandler(request,response)
     }
     //-----Error Endpoint-------------------------------------------------------
     else {
