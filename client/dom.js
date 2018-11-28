@@ -2,17 +2,17 @@
     var country = document.getElementById("country").value;
     var city = document.getElementById("city").value;
 
-     fetch(`/searchPraytimes`)
+     fetch(`/searchPraytimes?city=${city}&country=${country}`)
     .then(response => {
-      return response.json({city,country});
+      return response.json();
     })
     .then(function (data){ 
-        var allDataarr= JSON.parse(data);
+        var allDataarr= data;
         var time = allDataarr[0];
         var bdate = allDataarr[1];
         var hijridate = allDataarr[2];
 
-        var parentContainer = document.createElement("section");
+        var parentContainer = document.getElementById("parentid");
         var countryName= document.createElement("p");
         countryName.setAttribute('class','countryClass')
         var cityName= document.createElement("p");
