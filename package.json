@@ -13,7 +13,7 @@
     "jshint": "^2.9.6"
   },
   "scripts": {
-    "test": "jshint src/test.js && tape src/test.js | tap-spec",
+    "test": "tape src/test.js | tap-spec",
     "start": "nodemon src/server.js"
   },
   "repository": {
