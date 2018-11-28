@@ -37,7 +37,7 @@ const SPTHandler=(request,response)=>{
 }
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
-  response.writeHead(404, {'Content-Type':'text/html'})
+  response.writeHead(404, {'content-Type': 'text/html'})
   response.end('<h1>Page Not Found</h1>')
 }
 

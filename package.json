@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "eslint": "^5.9.0",
     "node": "^11.2.0",
     "nodemon": "^1.18.7",
-    "request": "^2.88.0",
-    "supertest": "^3.3.0",
+    "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.6",
+    "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "tape src/test.js ",
-    "start": "nodemon src/server.js"
+    "test": "tape src/test.js | tap-spec",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
