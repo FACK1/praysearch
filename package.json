@@ -6,15 +6,17 @@
   "dependencies": {
     "eslint": "^5.9.0",
     "node": "^11.2.0",
-    "nodemon": "^1.18.7",
-    "tape": "^4.9.1"
+    "nodemon": "^1.18.7"
   },
   "devDependencies": {
-    "jshint": "^2.9.6"
+    "jshint": "^2.9.6",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   },
   "scripts": {
-    "test": "jshint src/test.js && tape src/test.js | tap-spec",
-    "start": "nodemon src/server.js"
+    "test": "tape src/test.js | tap-spec",
+    "dev":"nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
