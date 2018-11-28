@@ -16,6 +16,7 @@ test('check status code is 200', (t) => {
     .end((err, res) => {
       t.error(err)
       t.equal(res.statusCode, 200, 'response should 200');
+      //t.equal(res.text, 'Hello', 'response should contain \'Hello\'');
       t.end();
     });
 });
