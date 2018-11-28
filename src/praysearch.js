@@ -15,11 +15,11 @@ var country=(queryString.parse(info)).country;
      var dates=[]
      var hijridates=[]
     //console.log(data[0].timings);
-    data.map(function(element) {
-    timeofparys.push(element.timings);
-    dates.push(element.date.readable);
-    hijridates.push(element.date.hijri.date);
-    });
+    // data.map(function(element) {
+    // timeofparys.push(element.timings);
+    // dates.push(element.date.readable);
+    // hijridates.push(element.date.hijri.date);
+    // });
     var alldata=[];
     alldata[0]=timeofparys;
     alldata[1]=dates;
