@@ -15,12 +15,14 @@ var country=(queryString.parse(info)).country;
      var dates=[]
      var hijridates=[]
     //console.log(data[0].timings);
+
     data.map(function(element) {
     timeofparys.push(element.timings);
     dates.push(element.date.readable);
     hijridates.push(element.date.hijri.date);
     });
     var alldata=[timeofparys,dates,hijridates];
+
 
     if(error){
        response.writeHead(500, {'content-Type': 'text/html'})
