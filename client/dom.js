@@ -13,6 +13,7 @@ function event1(e){
         var hijridate = allDataarr[2];
 
         var parentContainer = document.getElementById("parentid");
+        parentContainer.innerHTML="";
 
         var infoParent = document.createElement("div");
         infoParent.setAttribute('id','info');
@@ -54,7 +55,6 @@ function event1(e){
                 timeElement.textContent= dateString;
                 // timeElement.textContent=element
                 timeElements.appendChild(timeElement);
-
         });
         infoParent.appendChild(timeElements);
 
