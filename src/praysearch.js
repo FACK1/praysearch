@@ -15,20 +15,21 @@ var country=(queryString.parse(info)).country;
      var dates=[]
      var hijridates=[]
     //console.log(data[0].timings);
-
     data.map(function(element) {
     timeofparys.push(element.timings);
     dates.push(element.date.readable);
     hijridates.push(element.date.hijri.date);
     });
-    var alldata=[timeofparys,dates,hijridates];
-
+    var alldata=[];
+    alldata[0]=timeofparys;
+    alldata[1]=dates;
+    alldata[2]=hijridates;
 
     if(error){
        response.writeHead(500, {'content-Type': 'text/html'})
        response.end('<h1> Server error! sorry</h1>')
     }
-    response.writeHead(200, {'Content-Type': 'text/html'})
+    response.writeHead(200, {'Content-Type': 'application/json'})
     response.end(JSON.stringify(alldata));
 
   });
