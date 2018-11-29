@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "eslint": "^5.9.0",
     "node": "^11.2.0",
     "nodemon": "^1.18.7",
     "supertest": "^3.3.0"
   },
   "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "jshint": "^2.9.6",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
@@ -17,7 +23,9 @@
   "scripts": {
     "test": "tape src/test.js | tap-spec",
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "lint": "./node_modules/.bin/eslint ./",
+    "lint-fix": "./node_modules/.bin/eslint --fix ./"
   },
   "repository": {
     "type": "git",

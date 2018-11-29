@@ -1,8 +1,8 @@
 
 fetch('/searchPraytimes?city=hebron&country=palestine')
   .then(response => {
-    return response.json();
+    return response.json()
   })
-   .then(function (data){
+  .then(function (data) {
 
-   })
+  })
