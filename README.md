@@ -4,7 +4,7 @@
    A website will show to user a pray times of the input city along of the month  
 
 ## User journey:
-   In our app you can search for an city, where a user must to input the name of country and city.
+   In our website you can search for an city, where a user just must to input the name of parent country and city.
 
 ## Website Link: [Pray Times]()
 
@@ -34,7 +34,7 @@
       
       - test.js
       
-## HTML structure : 
+## User Interface : 
    - our website is a page contains a title for website with background , and two input fields to enter the country and city names with submit button that when clicked will the data on the browser on list contains ( country name, city name, hijri date, Gregorian date, and pray times)
 
 ## Team Members:
