@@ -34,6 +34,9 @@
       
       - test.js
       
+## Test Coverage:
+   - We use istanbul test tool for Code Coverage which is Pass.
+   
 ## User Interface : 
    - our website is a page contains a title for website with background , and two input fields to enter the country and city names with submit button that when clicked will the data on the browser on list contains ( country name, city name, hijri date, Gregorian date, and pray times)
 
