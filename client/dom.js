@@ -1,42 +1,63 @@
+console.log("goooo")
+function event1(e){
     var country = document.getElementById("country").value;
     var city = document.getElementById("city").value;
-
      fetch(`/searchPraytimes?city=${city}&country=${country}`)
     .then(response => {
       return response.json();
     })
-    .then(function (data){
-        var allDataarr= data;
+    .then(function (allDataarr){
+        // var allDataarr= data;
         var time = allDataarr[0];
         var bdate = allDataarr[1];
         var hijridate = allDataarr[2];
 
         var parentContainer = document.getElementById("parentid");
-        var countryName= document.createElement("p");
-        countryName.setAttribute('class','country')
-        var cityName= document.createElement("p");
-        cityName.setAttribute('class','city')
-
-        countryName.appendChild(parentContainer);
-        cityName.appendChild(parentContainer);
+        parentContainer.innerHTML="";
 
         var infoParent = document.createElement("div");
         infoParent.setAttribute('id','info');
 
+        var hijriDateElements= document.createElement("ul");
+        hijriDateElements.setAttribute('class','hijriDate')
         hijridate.forEach(element => {
-            var hijriDate= document.createElement("h3");
-                hijriDate.setAttribute('class','hijriDate')
-                hijriDate.appendChild(infoParent);
+          // console.log('element',element);
+                var hijriDateElement= document.createElement("li");
+                hijriDateElement.textContent="hijri Date:  "+element
+                hijriDateElement.setAttribute('class','hijriDateElement');
+                hijriDateElements.appendChild(hijriDateElement);
+
         });
+          infoParent.appendChild(hijriDateElements);
+
+        var bdateElements= document.createElement("ul");
+        bdateElements.setAttribute('class','bDate')
         bdate.forEach(element => {
-            var bDate= document.createElement("h3");
-                bDate.setAttribute('class','bDate')
-                bDate.appendChild(infoParent);
+          // console.log('element',element);
+                var bdateElement= document.createElement("li");
+                bdateElement.textContent="Gregorian calendar:  "+element
+                bdateElement.setAttribute('class','bDateElement');
+                bdateElements.appendChild(bdateElement);
+
         });
+        infoParent.appendChild(bdateElements);
+
+        var timeElements= document.createElement("ul");
+          timeElements.setAttribute('class','time')
         time.forEach(element => {
-            var timeDiv= document.createElement("div");
-                timeDiv.setAttribute('class','time');
-                timeDiv.appendChild(infoParent);
+          console.log('element',element);
+           var dateString = "Fajer =" +element.Fajr + "Sunrise =" +element.Sunrise
+           + "Dhuhr=" +element.Dhuhr+ "Dhuhr =" +element.Dhuhr + "Asr =" +element.Asr
+           + "Maghrib=" +element.Maghrib + "Sunset =" +element.Sunset + "Isha ="+element.Isha
+           + "Midnight =" +element.Midnight
+                var timeElement= document.createElement("li");
+                timeElement.setAttribute('class','timeElement')
+                timeElement.textContent= dateString;
+                // timeElement.textContent=element
+                timeElements.appendChild(timeElement);
         });
-        infoParent.appendChild(parentContainer);
+        infoParent.appendChild(timeElements);
+
+        parentContainer.appendChild(infoParent);
     })
+  }

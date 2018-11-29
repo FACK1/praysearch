@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Prayer Times</title>
-	<link rel="stylesheet" href="client/style.css" type="text/css">
+	<title>languages-search</title>
+	<link rel="stylesheet" href="/client/style.css" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 </head>
 
 <body class = "container-flex">
   	<!-- START <header-->
-	<header class = "header">
-		<h1>Prayer Times</h1>
-		<label for="country"></label>
-        <input type="text" name="country" id="country" >
-				<label for="city"></label>
-		<input type="text" name="city" id="city" >
+<header  >
+	<h1 class="main-heading"> Pray times</h1>
+
+		<div class="form">
+			<label for="country" class="labels">City Name</label>
+			<input id="country" type="text" name="country" placeholder="Enter your country">
+			<label for="city" class="labels">Country Name</label>
+			<input id="city" type="text" name="city" placeholder="Enter your city">
+<br>
+		<input type="submit" value="Submit" onclick="event1()">
+	</div>
 	</header>
   	<!-- END <header-->
-	<div id="parnet">
+	<div id="parentid">
 
 	</div>
-<script src="client/main.js" type="text/javascript"></script>
+
 <script src="client/dom.js" type="text/javascript"></script>
 
 </html>

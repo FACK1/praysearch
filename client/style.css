@@ -1,0 +1,70 @@
+body{
+  background-image: url('https://images.pexels.com/photos/394355/pexels-photo-394355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+background-repeat: repeat;
+background-size: cover;
+background-position: center;
+height: 100vh;
+}
+.main-heading{
+    font-size:100px;
+    text-align:center;
+    margin:0px;
+    padding:50px;
+    color:#204e39;
+}
+input[type=submit] ,input[type=text] {
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: auto;
+}
+input[type=text]{
+    width: 70%;
+    margin-top: 10px;
+}
+input[type=submit]{
+    width: 20%;
+    color:white;
+    margin-top: 6px;
+    background-color:#204e39;
+}
+.labels{
+  display: block;
+  font-size: 30px;
+  color: white;
+
+}
+.form{
+    margin: 0 20%;
+}
+#info
+{
+  background-color: rgba(0  , 0, 0, 0.5);
+  display: flex;
+}
+
+.hijriDateElement{
+margin-bottom: 15px;
+}
+
+.bDateElement{
+margin-bottom: 15px;
+}
+.timeElement{
+  margin-bottom: 15px;
+}
+
+.time
+{
+list-style-type: none;
+color:white;
+}
+
+.hijriDate{
+  list-style-type: none;
+  color:white;
+}
+.bDate{
+  list-style-type: none;
+  color:white;
+}
