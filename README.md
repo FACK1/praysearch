@@ -1,7 +1,7 @@
 ### Pray Times
 
 ## About:
-   A website will show to user a pray times of the input city along of the month  
+   A website app shows the pray times of the input city along of the current month  
 
 ## User journey:
    In our website you can search for an city, where a user just must to input the name of parent country and city.
