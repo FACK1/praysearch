@@ -2,8 +2,6 @@ var request1 = require('request');
 var url1 = require('url');
 const queryString = require('querystring');
 const timepray=(request,response)=>{
-
-
 var info=url1.parse(request.url).query;
 var city=(queryString.parse(info)).city;
 var country=(queryString.parse(info)).country;
@@ -20,10 +18,7 @@ var country=(queryString.parse(info)).country;
     dates.push(element.date.readable);
     hijridates.push(element.date.hijri.date);
     });
-    var alldata=[];
-    alldata[0]=timeofparys;
-    alldata[1]=dates;
-    alldata[2]=hijridates;
+    var alldata=[timeofparys,dates,hijridates];
 
     if(error){
        response.writeHead(500, {'content-Type': 'text/html'})
