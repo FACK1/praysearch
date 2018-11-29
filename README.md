@@ -6,7 +6,7 @@
 ## User journey:
    In our app you can search for an city, where a user must to input the name of country and city.
 
-## Website Link: [Pray Times](https://prayertimesapplication.herokuapp.com/)
+## Website Link: [Pray Times]()
 
 ## Site design :
 
