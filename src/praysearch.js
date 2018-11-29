@@ -20,10 +20,7 @@ var country=(queryString.parse(info)).country;
     dates.push(element.date.readable);
     hijridates.push(element.date.hijri.date);
     });
-    var alldata=[];
-    alldata[0]=timeofparys;
-    alldata[1]=dates;
-    alldata[2]=hijridates;
+    var alldata=[timeofparys,dates,hijridates];
 
     if(error){
        response.writeHead(500, {'content-Type': 'text/html'})
